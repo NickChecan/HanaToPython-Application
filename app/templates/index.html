@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+    	<meta charset="utf-8">
+    	<title>Hana 2 Python</title>
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    	<script>
+        	$(document).ready(function () {
+        		
+        		$.get("api/getSalesData", function (data) {
+        			console.log(data);
+        			for(var i = 0; i < data.length; i++) {
+        				$("#table tbody").append('<tr><td>' + data[i].regionName + 
+        										 '</td><td>' + data[i].productName + 
+        										 '</td><td>' + data[i].salesAmount + '</td>');	
+        			}
+				}, "json");
+
+				var link1 = "http://" + window.location.host + "/api/getRegions";
+        		$("#link1").attr("href", link1).text(link1);
+        		var link2 = "http://" + window.location.host + "/api/getProducts";
+        		$("#link2").attr("href", link2).text(link2);
+
+	        });
+    	</script>
+   		<div class="container">
+   			<h2>Hana data in a Python web application</h2>
+   			<p>This application uses common python/web frameworks. Gathering sales informations...</p>
+   			<table id="table" class="table table-striped">
+    			<thead>
+      				<tr>
+	        			<th>Region Name</th>
+    	    			<th>Product Name</th>
+    	    			<th>Sales Amount</th>
+      				</tr>
+    			</thead>
+    			<tbody></tbody>
+  			</table>
+            <p>Try also <a id="link1"></a> or <a id="link2"></a>.</p>
+   		</div>
+	</body>
+</html>
