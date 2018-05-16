@@ -55,7 +55,7 @@ The installation procedure described in this documentation will assume you've al
  To execute this application it will be necessary to properly deploy the [Hana Service](https://github.com/NickChecan/HanaService) project into your Hana Trial environment.
 
  - A Python Editor of your choice </br>
- For this project the [PyCharm](https://www.jetbrains.com/pycharm/) IDE and [Visual Studio Code](https://code.visualstudio.com/) was used for development, but the same is not required to correctly deploy the application it self.
+ For this project the [PyCharm](https://www.jetbrains.com/pycharm/) IDE and [Visual Studio Code](https://code.visualstudio.com/) were used for development, but the same is not required to correctly deploy the application it self.
 
  - Install the virtual environment package </br>
  **Virtual Environment** (virtualenv) is a tool to create isolated Python environments. The *virtualenv* command creates a folder which contains all the necessary executables to use the packages that a Python project would need. The same can be installed as described in [this link](http://docs.python-guide.org/en/latest/dev/virtualenvs/) through the following command:
