@@ -4,4 +4,4 @@ itsdangerous==0.24
 Jinja2>=2.10.1
 MarkupSafe==1.0
 pyhdb==0.3.3
-Werkzeug==0.12.2
+Werkzeug==0.15.3
